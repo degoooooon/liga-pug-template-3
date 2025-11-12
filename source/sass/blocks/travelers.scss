@@ -40,8 +40,8 @@
         width: 172px;
         height: 5px;
         bottom: -13px;
-        left: 0px;
-        background-color: #FFFFFF;
+        left: 0;
+        background-color: #ffffff;
       }
     }
 
@@ -238,14 +238,14 @@
       &::before {
         content: "";
         width: calc(44% - 219px);
-        border-bottom: 1px solid #EDEFF6;
+        border-bottom: 1px solid #edeff6;
         height: 9px;
       }
 
       &::after {
         content: "";
         width: 10px;
-        border-bottom: 1px solid #EDEFF6;
+        border-bottom: 1px solid #edeff6;
         height: 10px;
         flex-grow: 1;
       }
@@ -317,7 +317,7 @@
     max-width: 664px;
 
     @include vp-1279 {
-      padding: 0px 0px 0px 12px;
+      padding: 0 0 0 12px;
       display: grid;
       grid-template-columns: 70% 30%;
       grid-template-rows: 50px 54px 90px;
@@ -372,7 +372,7 @@
     overflow: hidden;
     cursor: pointer;
     padding: 18px 15px 15px 15px;
-    color: #161C35;
+    color: #161c35;
 
     @include vp-1279 {
       width: 170px;
@@ -393,7 +393,7 @@
     }
 
     &:hover {
-      background-color: #4D99D6;
+      background-color: #4d99d6;
     }
 
     &:active {
@@ -494,7 +494,7 @@
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
-    color: #161C35;
+    color: #161c35;
 
     @include vp-767 {
       font-size: 14px;
@@ -517,7 +517,7 @@
     justify-content: center;
     margin-bottom: 70px;
     cursor: pointer;
-    color: #1D2E5B;
+    color: #1d2e5b;
 
     &:hover {
       opacity: 0.6;
@@ -576,7 +576,7 @@
   @include vp-767 {
     width: 32px;
     height: 32px;
-    background-color: #EDEFF6;
+    background-color: #edeff6;
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -598,17 +598,17 @@
 
 .travelers__stroke {
   fill: none;
-  stroke: #4D99D6;
+  stroke: #4d99d6;
   stroke-width: 2;
   stroke-linecap: round;
 
   @include vp-1279 {
-    stroke: #FF8D30;
+    stroke: #ff8d30;
   }
 }
 
 .travelers__percentage {
-  color: #1D2E5B;
+  color: #1d2e5b;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
@@ -688,7 +688,7 @@
       content: "";
       width: 100%;
       height: 1px;
-      background-color: #EDEFF6;
+      background-color: #edeff6;
       position: absolute;
       top: 9px;
       left: 20px;

@@ -29,6 +29,11 @@
       margin-right: 24%;
       color: #ffffff;
       z-index: 2;
+      transition: color 0.3s ease;
+
+      &.is-active {
+        color: #192144; // цвет при открытом меню
+      }
     }
 
     @include vp-767 {
@@ -68,13 +73,4 @@
 
 .header--padding .header__logo:hover {
   opacity: 0.8;
-}
-
-.header__logo-mobile {
-  color: #ffffff; // базовый цвет логотипа
-  transition: color 0.3s ease;
-
-  &.is-active {
-    color: #192144; // цвет при открытом меню
-  }
 }

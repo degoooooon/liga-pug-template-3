@@ -8,22 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Проверка на наличие всех элементов
   if (!minInput || !maxInput || !bar || !toggleMin || !toggleMax || !scale) {
-    console.warn('Range-слайдер: необходимые элементы не найдены');
     return;
   }
 
-  const minLimit = parseInt(minInput.min);
-  const maxLimit = parseInt(maxInput.max);
+  const minLimit = parseInt(minInput.min, 10);
+  const maxLimit = parseInt(maxInput.max, 10);
   const minGap = 15;
   let activeToggle = null;
 
   function updateVisuals() {
     const scaleWidth = scale.offsetWidth;
-    let minVal = parseInt(minInput.value);
-    let maxVal = parseInt(maxInput.value);
+    let minVal = parseInt(minInput.value, 10);
+    let maxVal = parseInt(maxInput.value, 10);
 
-    if (isNaN(minVal)) minVal = minLimit;
-    if (isNaN(maxVal)) maxVal = maxLimit;
+    if (isNaN(minVal)) {
+      minVal = minLimit;
+    }
+    if (isNaN(maxVal)) {
+      maxVal = maxLimit;
+    }
 
     if (maxVal - minVal < minGap) {
       if (activeToggle === toggleMin) {
@@ -65,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const value = Math.round(percent * (maxLimit - minLimit) + minLimit);
 
     if (activeToggle === toggleMin) {
-      minInput.value = Math.min(value, parseInt(maxInput.value) - minGap);
+      minInput.value = Math.min(value, parseInt(maxInput.value, 10) - minGap);
     } else if (activeToggle === toggleMax) {
-      maxInput.value = Math.max(value, parseInt(minInput.value) + minGap);
+      maxInput.value = Math.max(value, parseInt(minInput.value, 10) + minGap);
     }
 
     updateVisuals();
@@ -84,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function onTouchStart(e) {
     activeToggle = e.target;
-    document.addEventListener('touchmove', onTouchMove, { passive: false });
+    document.addEventListener('touchmove', onTouchMove, {passive: false});
     document.addEventListener('touchend', onTouchEnd);
   }
 
@@ -97,9 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const value = Math.round(percent * (maxLimit - minLimit) + minLimit);
 
     if (activeToggle === toggleMin) {
-      minInput.value = Math.min(value, parseInt(maxInput.value) - minGap);
+      minInput.value = Math.min(value, parseInt(maxInput.value, 10) - minGap);
     } else if (activeToggle === toggleMax) {
-      maxInput.value = Math.max(value, parseInt(minInput.value) + minGap);
+      maxInput.value = Math.max(value, parseInt(minInput.value, 10) + minGap);
     }
 
     updateVisuals();
@@ -111,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
     activeToggle = null;
   }
 
-  toggleMin.addEventListener('touchstart', onTouchStart, { passive: false });
-  toggleMax.addEventListener('touchstart', onTouchStart, { passive: false });
+  toggleMin.addEventListener('touchstart', onTouchStart, {passive: false});
+  toggleMax.addEventListener('touchstart', onTouchStart, {passive: false});
 
   window.addEventListener('load', updateVisuals);
 });

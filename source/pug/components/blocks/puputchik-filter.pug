@@ -12,19 +12,19 @@ mixin puputchik-filter
             ul.puputchik-filter__list
               li
                 label
-                  input.visually-hidden(type="checkbox" id="hobby-rock" checked)
+                  input.visually-hidden(type="checkbox", id="hobby-rock", checked)
                   span.puputchik-filter__checkbox
                     +check("check")
                   | Спортзал
               li
                 label
-                  input.visually-hidden(type="checkbox" id="hobby-rap")
+                  input.visually-hidden(type="checkbox", id="hobby-rap")
                   span.puputchik-filter__checkbox
                     +check("check")
                   | Кальян
               li
                 label
-                  input.visually-hidden(type="checkbox" id="hobby-eurodance")
+                  input.visually-hidden(type="checkbox", id="hobby-eurodance")
                   span.puputchik-filter__checkbox
                     +check("check")
                   | Диван
@@ -38,19 +38,19 @@ mixin puputchik-filter
             ul.puputchik-filter__list
               li
                 label
-                  input.visually-hidden(type="checkbox" id="music-rock" checked)
+                  input.visually-hidden(type="checkbox", id="music-rock", checked)
                   span.puputchik-filter__checkbox
                     +check("check")
                   | Тяжелый рок
               li
                 label
-                  input.visually-hidden(type="checkbox" id="music-rap")
+                  input.visually-hidden(type="checkbox", id="music-rap")
                   span.puputchik-filter__checkbox
                     +check("check")
                   | Русский рэп
               li
                 label
-                  input.visually-hidden(type="checkbox" id="music-eurodance")
+                  input.visually-hidden(type="checkbox", id="music-eurodance")
                   span.puputchik-filter__checkbox
                     +check("check")
                   | Евроденс
@@ -64,19 +64,19 @@ mixin puputchik-filter
             ul.puputchik-filter__list
               li
                 label
-                  input.visually-hidden(type="checkbox" id="food-rock" checked)
+                  input.visually-hidden(type="checkbox", id="food-rock", checked)
                   span.puputchik-filter__checkbox
                     +check("check")
                   | Мясоед
               li
                 label
-                  input.visually-hidden(type="checkbox" id="food-rap")
+                  input.visually-hidden(type="checkbox", id="food-rap")
                   span.puputchik-filter__checkbox
                     +check("check")
                   | Сидит на ПП
               li
                 label
-                  input.visually-hidden(type="checkbox" id="food-eurodance")
+                  input.visually-hidden(type="checkbox", id="food-eurodance")
                   span.puputchik-filter__checkbox
                     +check("check")
                   | Веган-сыроед
@@ -90,7 +90,7 @@ mixin puputchik-filter
             ul.puputchik-filter__list.puputchik-filter__list--row
               li
                 label(aria-label="Выбрать Авиаперелет")
-                  input.visually-hidden(type="checkbox" id="transport-plane" checked)
+                  input.visually-hidden(type="checkbox", id="transport-plane", checked)
                   span.puputchik-filter__span
                     <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_1369_2997)">
@@ -100,7 +100,7 @@ mixin puputchik-filter
                   span.puputchik-filter__tooltip Авиаперелет
               li
                 label(aria-label="Выбрать Автотранспорт")
-                  input.visually-hidden(type="checkbox" id="transport-bus" checked)
+                  input.visually-hidden(type="checkbox", id="transport-bus", checked)
                   span.puputchik-filter__span
                     <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_1369_2981)">
@@ -110,7 +110,7 @@ mixin puputchik-filter
                   span.puputchik-filter__tooltip Автотранспорт
               li
                 label(aria-label="Выбрать Велосипед")
-                  input.visually-hidden(type="checkbox" id="transport-bike")
+                  input.visually-hidden(type="checkbox", id="transport-bike")
                   span.puputchik-filter__span
                     <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M17.4297 19.25C16.6123 19.25 15.8133 19.0182 15.1336 18.5838C14.454 18.1494 13.9243 17.532 13.6115 16.8097C13.2987 16.0873 13.2168 15.2925 13.3763 14.5257C13.5358 13.7588 13.9294 13.0544 14.5073 12.5016C15.0853 11.9487 15.8217 11.5722 16.6234 11.4197C17.4251 11.2672 18.2561 11.3455 19.0112 11.6447C19.7664 11.9439 20.4119 12.4506 20.866 13.1006C21.3201 13.7507 21.5625 14.515 21.5625 15.2969C21.5613 16.345 21.1255 17.3498 20.3507 18.0909C19.5759 18.832 18.5254 19.2489 17.4297 19.25ZM17.4297 12.7188C16.8966 12.7188 16.3755 12.87 15.9323 13.1532C15.489 13.4365 15.1435 13.8392 14.9395 14.3103C14.7355 14.7814 14.6822 15.2997 14.7862 15.7998C14.8902 16.3 15.1469 16.7593 15.5238 17.1199C15.9008 17.4804 16.381 17.726 16.9039 17.8255C17.4267 17.9249 17.9686 17.8739 18.4611 17.6788C18.9536 17.4836 19.3746 17.1532 19.6708 16.7292C19.9669 16.3052 20.125 15.8068 20.125 15.2969C20.1242 14.6134 19.8399 13.9581 19.3346 13.4747C18.8294 12.9914 18.1443 12.7195 17.4297 12.7188Z" fill="currentColor" />
@@ -121,7 +121,7 @@ mixin puputchik-filter
                   span.puputchik-filter__tooltip Велосипед
               li
                 label(aria-label="Выбрать пешком")
-                  input.visually-hidden(type="checkbox" id="transport-walk" checked)
+                  input.visually-hidden(type="checkbox", id="transport-walk", checked)
                   span.puputchik-filter__span
                     <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M16.2917 5.49992C17.3502 5.49992 18.2083 4.67911 18.2083 3.66659C18.2083 2.65406 17.3502 1.83325 16.2917 1.83325C15.2331 1.83325 14.375 2.65406 14.375 3.66659C14.375 4.67911 15.2331 5.49992 16.2917 5.49992Z" fill="currentColor" />

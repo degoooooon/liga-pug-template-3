@@ -138,8 +138,8 @@
     top: 100%;
     left: 50%;
     max-width: 200px;
-    background-color: #101D41;
-    color: #FFFFFF;
+    background-color: #101d41;
+    color: #ffffff;
     padding: 18px 14px;
     z-index: 2;
     transform: translate(-50%, 10px);
@@ -183,7 +183,7 @@
   input:checked + span {
     svg {
       display: block;
-      color: #1D2E5B;
+      color: #1d2e5b;
       opacity: 1;
 
       &:hover {
@@ -221,7 +221,7 @@
 
   fieldset {
     padding: 0;
-    margin: 0px 0 15px;
+    margin: 0 0 15px;
     border: 0;
     position: relative;
 
@@ -241,7 +241,7 @@
     @include vp-767 {
       flex-direction: column;
       border-bottom: 1px solid #f3c72b;
-      margin: 0px 0 12px;
+      margin: 0 0 12px;
       padding: 0 0 8px;
 
       &:nth-child(3n) {
@@ -361,7 +361,7 @@
       padding: 15px 25px 14px;
       height: 41px;
       max-width: 100%;
-      margin: 0 0px 0 -5px;
+      margin: 0 0 0 -5px;
     }
 
     &:hover {
@@ -369,7 +369,7 @@
     }
 
     &:active {
-      background-color: #4D99D6;
+      background-color: #4d99d6;
       color: rgba(22, 28, 53, 0.3);
     }
   }

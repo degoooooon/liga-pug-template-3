@@ -30,7 +30,7 @@
     top: -60px;
     z-index: -1;
     bottom: 0;
-    background-color: #7EBAEB;
+    background-color: #7ebaeb;
     border-radius: 0 0 60px 60px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
 
@@ -64,7 +64,7 @@
     grid-column: 1 / 2;
 
     svg {
-      color: #CCE5FA;
+      color: #cce5fa;
     }
 
     @include vp-1279 {
@@ -78,10 +78,10 @@
     }
 
     &:hover {
-      color: #4D99D6;
+      color: #4d99d6;
 
       svg {
-        color: #4D99D6;
+        color: #4d99d6;
       }
     }
 
@@ -133,10 +133,10 @@
 
     &:hover {
       background-color: #192144;
-      color: #FFFFFF;
+      color: #ffffff;
 
       svg {
-        color: #FFFFFF;
+        color: #ffffff;
       }
     }
 

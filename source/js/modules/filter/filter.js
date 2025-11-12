@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterBlock = document.querySelector('.filter__container');
   const continents = document.querySelector('.filter__continents');
   const originalParent = document.querySelector('.filter__wrap');
-  const toggleText = toggleBtn?.querySelector('.filter__toggle-text');
+  const toggleText = toggleBtn ? toggleBtn.querySelector('.filter__toggle-text') : null;
 
   // Открытие/закрытие фильтра
   if (toggleBtn && filterBlock) {
@@ -29,14 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Обновление текста кнопки
+  // Обновление текста кнопки (без вложенного тернарного)
   function updateToggleText(isOpen) {
-    if (!toggleText || !filterBlock) return;
+    if (!toggleText || !filterBlock) {
+      return;
+    }
     const width = window.innerWidth;
-    toggleText.textContent =
-      width >= 1280 || width < 768
-        ? 'Фильтрация по странам:'
-        : isOpen ? 'Свернуть' : 'Показать все';
+    let text;
+
+    if (width >= 1280 || width < 768) {
+      text = 'Фильтрация по странам:';
+    } else if (isOpen) {
+      text = 'Свернуть';
+    } else {
+      text = 'Показать все';
+    }
+
+    toggleText.textContent = text;
   }
 
   // Перемещение блоков на мобильных
@@ -59,34 +68,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderLetter(letter) {
     const originalList = document.querySelector(`.filter__list-countries[data-letter="${letter}"]`);
-    if (!originalList) return;
+    if (!originalList) {
+      return;
+    }
     activeContainer.innerHTML = '';
     const clone = originalList.cloneNode(true);
     clone.style.display = 'block';
     activeContainer.appendChild(clone);
-    letterButtons.forEach(btn => btn.classList.remove('is-active'));
+    letterButtons.forEach((btn) => btn.classList.remove('is-active'));
     const activeBtn = document.querySelector(`.filter__letter-btn[data-letter="${letter}"]`);
-    if (activeBtn) activeBtn.classList.add('is-active');
+    if (activeBtn) {
+      activeBtn.classList.add('is-active');
+    }
   }
 
   function initLetterFilter() {
-    if (!lettersBlock) return;
+    if (!lettersBlock) {
+      return;
+    }
     if (window.innerWidth < 1280) {
       if (!activeContainer.parentNode) {
         lettersBlock.insertAdjacentElement('afterend', activeContainer);
       }
-      letterButtons.forEach(btn => {
+      letterButtons.forEach((btn) => {
         btn.onclick = () => renderLetter(btn.dataset.letter);
       });
       const firstBtn = document.querySelector('.filter__letter-btn');
-      if (firstBtn) renderLetter(firstBtn.dataset.letter);
+      if (firstBtn) {
+        renderLetter(firstBtn.dataset.letter);
+      }
     } else {
-      if (activeContainer.parentNode) activeContainer.remove();
-      letterButtons.forEach(btn => {
+      if (activeContainer.parentNode) {
+        activeContainer.remove();
+      }
+      letterButtons.forEach((btn) => {
         btn.onclick = null;
         btn.classList.remove('is-active');
       });
-      document.querySelectorAll('.filter__list-countries').forEach(list => {
+      document.querySelectorAll('.filter__list-countries').forEach((list) => {
         list.style.display = '';
       });
     }
@@ -94,28 +113,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 🔹 Инициализация при загрузке и ресайзе
   moveContinentsIfMobile();
-  updateToggleText(filterBlock?.classList.contains('is-open'));
+  updateToggleText(filterBlock && filterBlock.classList.contains('is-open'));
   initLetterFilter();
 
   window.addEventListener('resize', () => {
     moveContinentsIfMobile();
-    updateToggleText(filterBlock?.classList.contains('is-open'));
+    updateToggleText(filterBlock && filterBlock.classList.contains('is-open'));
     initLetterFilter();
   });
 });
 
+// 🔹 Аккордеон для puputchik-filter
 const toggles = document.querySelectorAll('.puputchik-filter__toggle');
 const contents = document.querySelectorAll('.puputchik-filter__content');
 
-// 🔹 Инициализация: выставить max-height для открытых блоков
-contents.forEach(content => {
+// Инициализация: выставить max-height для открытых блоков
+contents.forEach((content) => {
   if (content.classList.contains('is-open')) {
     content.style.maxHeight = content.scrollHeight + 'px';
   }
 });
 
-// 🔹 Переключение при клике
-toggles.forEach(toggle => {
+// Переключение при клике
+toggles.forEach((toggle) => {
   toggle.addEventListener('click', () => {
     const content = toggle.nextElementSibling;
     const isOpen = content.classList.contains('is-open');
@@ -140,9 +160,9 @@ toggles.forEach(toggle => {
   });
 });
 
-// 🔹 Обработка ресайза
+// Обработка ресайза
 window.addEventListener('resize', () => {
-  contents.forEach(content => {
+  contents.forEach((content) => {
     if (content.classList.contains('is-open')) {
       content.style.maxHeight = content.scrollHeight + 'px';
     }

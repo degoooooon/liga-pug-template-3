@@ -21,7 +21,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #272B3B;
+    background-color: #272b3b;
     border-radius: 0 0 56px 56px;
 
     @include vp-1023 {
@@ -101,7 +101,7 @@
       margin: 0 0 40px;
     }
 
-    span::after{
+    span::after {
       @include vp-767 {
         content: "\a ";
         white-space: pre;

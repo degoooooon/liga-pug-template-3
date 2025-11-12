@@ -1,7 +1,7 @@
 mixin appointment
   section.appointment
     .container
-      form.appointment__form(action="https://echo.htmlacademy.ru" method="post")
+      form.appointment__form(action="https://echo.htmlacademy.ru", method="post")
         h2.appointment__title Заинтересовались?
         p.appointment__desk
           | Зарегистрируйтесь, это быстро и&nbsp;бесплатно!
@@ -12,7 +12,7 @@ mixin appointment
           a(href="#")
             |  авторизуйтесь.
         .appointment__label
-          input(type="email" placeholder="E-mail" name="email" autocomplete="email")
+          input(type="email", placeholder="E-mail", name="email", autocomplete="email")
           button.appointment__button.button(type="submit")
             span.appointment__span Регистрация
             +icon("polygon", 14, 16)

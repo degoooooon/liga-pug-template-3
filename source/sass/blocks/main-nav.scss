@@ -20,7 +20,7 @@
       top: 0;
       margin-left: 0;
       padding: 105px 28px 29px 25px;
-      background-color: #FFFFFF;
+      background-color: #ffffff;
     }
 
     &::before {
@@ -68,9 +68,18 @@
     color: $color-default-white;
     font-weight: 500;
     text-transform: uppercase;
+    display: block;
+    overflow: hidden;
 
     &.is-active {
       opacity: 0.6;
+    }
+
+    @include hover-focus {
+      span {
+        transform: translateY(-100%);
+        color: #7ebaeb;
+      }
     }
 
     @include vp-1279 {
@@ -110,7 +119,7 @@
     }
 
     &:hover {
-      background-color: #468AC1;
+      background-color: #468ac1;
     }
 
     &:active svg {
@@ -150,8 +159,8 @@
       content: "";
       width: 25px;
       height: 3px;
-      background-color: #FFFFFF;
-      box-shadow: 0px 8px 0 #fff;
+      background-color: #ffffff;
+      box-shadow: 0 8px 0 #ffffff;
       position: absolute;
       border-radius: 1px;
     }
@@ -159,7 +168,7 @@
 
   &__close {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: -16px;
     display: none;
 
@@ -170,7 +179,7 @@
       height: 25px;
       right: -29px;
       content: "";
-      background-color: #CCCCCC;
+      background-color: #cccccc;
       transform: rotate(45deg);
     }
 
@@ -181,7 +190,7 @@
       height: 25px;
       right: -29px;
       content: "";
-      background-color: #CCCCCC;
+      background-color: #cccccc;
       transform: rotate(-45deg);
     }
   }
@@ -197,11 +206,6 @@
   display: block;
 }
 
-.main-nav__link {
-  display: block;
-  overflow: hidden;
-}
-
 .main-nav__link span {
   position: relative;
   display: inline-block;
@@ -215,20 +219,11 @@
   }
 }
 
-.main-nav__link {
-  @include hover-focus {
-    span {
-      transform: translateY(-100%);
-      color: #7ebaeb;
-    }
-  }
-}
-
 .main-nav__link:focus-visible {
   border: 0;
   outline: 0;
 }
 
 .main-nav__link:active span {
-  color: #4E91D1;
+  color: #4e91d1;
 }

@@ -1,7 +1,7 @@
 .contant-info {
   margin: 0 auto;
   list-style-type: none;
-  padding: 0 0px 0 33px;
+  padding: 0 0 0 33px;
   display: flex;
   gap: 105px;
   flex-wrap: wrap;
@@ -21,7 +21,7 @@
     display: flex;
     font-size: 28px;
     line-height: 28px;
-    color: #cce5fA;
+    color: #cce5fa;
     align-items: center;
     text-transform: uppercase;
 
@@ -31,7 +31,7 @@
     }
 
     &:hover {
-      color: #4D99D6;
+      color: #4d99d6;
     }
 
     &:active {
@@ -40,7 +40,7 @@
   }
 
   &__svg {
-    margin: -3px 31px 0px 0;
+    margin: -3px 31px 0 0;
 
     @include vp-1279 {
       margin: -5px 22px 0 0;
@@ -80,6 +80,7 @@
 
 .contant-info--current {
   display: none;
+
   @include vp-1279 {
     display: block;
     gap: 8px;
@@ -87,7 +88,7 @@
     margin-left: -11px;
 
     svg {
-      color: #A8D2F4;
+      color: #a8d2f4;
     }
 
     a {
@@ -95,5 +96,3 @@
     }
   }
 }
-
-

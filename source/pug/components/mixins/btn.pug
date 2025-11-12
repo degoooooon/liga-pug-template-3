@@ -1,17 +1,12 @@
 mixin btn(options = {})
   - const tag    = options.href ? "a" : "button"
   - const href   = options.href || false
-  - const text   = options.text || ""
+  - const text   = options.text || attributes.text || ""
   - const type   = options.type || (tag === "button" ? "button" : false)
   - const target = options.isExternal ? "_blank" : false
   - const rel    = options.isExternal ? "nofollow noopener noreferrer" : false
 
-  #{tag}.btn(
-    href=href
-    target=target
-    rel=rel
-    type=type
-  )&attributes(attributes)
+  #{tag}.btn(href=href, target=target, rel=rel, type=type)&attributes(attributes)
     if text
       | #{text}
     block

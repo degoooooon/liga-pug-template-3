@@ -61,13 +61,13 @@
     text-align: center;
     border-radius: 4px;
     letter-spacing: 0.04em;
-    color: #1D2E5B;
+    color: #1d2e5b;
     font-weight: 500;
     border: 1px solid #cbced9;
     outline: 0;
 
     &:hover {
-      border: 1px solid #959BB2;
+      border: 1px solid #959bb2;
     }
 
     &--min {
@@ -109,7 +109,7 @@
     position: relative;
     height: 3px;
     border-radius: 2px;
-    background-color: rgba(29, 46, 91, 0.20);
+    background-color: rgba(29, 46, 91, 0.2);
 
     @include vp-1279 {
       left: 59px;
@@ -127,7 +127,7 @@
   &__bar {
     position: absolute;
     height: 3px;
-    background-color: #1D2E5B;
+    background-color: #1d2e5b;
     left: 62px;
     width: 130px;
   }
@@ -136,7 +136,7 @@
     position: absolute;
     width: 13px;
     height: 13px;
-    background: #1D2E5B;
+    background: #1d2e5b;
     border-radius: 50%;
     cursor: pointer;
     padding: 0;

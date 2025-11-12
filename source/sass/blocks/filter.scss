@@ -11,7 +11,7 @@
     &::before {
       content: "";
       width: 100%;
-      background-color: #E2E5F2;
+      background-color: #e2e5f2;
       position: absolute;
       top: -176px;
       bottom: 25px;
@@ -90,7 +90,7 @@
 
     @include vp-767 {
       flex-direction: row-reverse;
-      margin: 2px 0px 0 0;
+      margin: 2px 0 0 0;
     }
 
     &:hover {
@@ -139,7 +139,7 @@
       height: 6px;
       border-radius: 100%;
       background-color: #192144;
-      box-shadow: -13px 0px 0 #192144, 13px 0px 0 0 #192144;
+      box-shadow: -13px 0 0 #192144, 13px 0 0 0 #192144;
       position: absolute;
       right: -48px;
       top: 5px;
@@ -148,7 +148,7 @@
     @include vp-767 {
       width: 3px;
       height: 3px;
-      box-shadow: -7px 0px 0 #192144, 7px 0px 0 0 #192144;
+      box-shadow: -7px 0 0 #192144, 7px 0 0 0 #192144;
       right: -16px;
       top: 9px;
     }
@@ -243,7 +243,7 @@
       height: 40px;
       margin: 0;
       opacity: 1;
-      border: 1px solid #CBCED9;
+      border: 1px solid #cbced9;
     }
   }
 
@@ -296,7 +296,7 @@
     width: 100%;
     text-transform: uppercase;
     color: #192144;
-    background-color: #D6DAED;
+    background-color: #d6daed;
     border-radius: 20px;
     padding: 39px 30px 37px 20px;
     display: flex;
@@ -305,7 +305,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: #C8CEE8;
+      background-color: #c8cee8;
     }
 
     svg {

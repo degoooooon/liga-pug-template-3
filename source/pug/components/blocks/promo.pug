@@ -1,10 +1,10 @@
 mixin promo
   section.promo
-    div.promo__fon
+    .promo__fon
       picture
-        source(media="(min-width: 1024px)" srcset="img/promo/globe-back-desktop.png" type="image/png" width="1440" height="750")
-        source(media="(min-width: 768px)" srcset="img/promo/globe-back-tablet.png" type="image/png" width="906" height="906")
-        img(src="img/promo/globe-back-mobile.png", srcset="img/promo/globe-back-mobile@2x.png" alt="" width="1440" height="750")
+        source(media="(min-width: 1024px)", srcset="img/promo/globe-back-desktop.png", type="image/png", width="1440", height="750")
+        source(media="(min-width: 768px)", srcset="img/promo/globe-back-tablet.png", type="image/png", width="906", height="906")
+        img(src="img/promo/globe-back-mobile.png", srcset="img/promo/globe-back-mobile@2x.png", alt="", width="1440", height="750")
     .container
       .promo__wrapper
         h1.promo__title
@@ -13,11 +13,11 @@ mixin promo
           | с крутыми
           br
           | попутчиками!
-        div.promo__img
+        .promo__img
           picture
-            source(media="(min-width: 1024px)" srcset="img/svg/traveller-illustration-desktop.svg" type="image/svg+xml" width="431" height="640")
-            source(media="(min-width: 768px)" srcset="img/svg/traveller-illustration-tablet.svg" type="image/svg+xml" width="437" height="530")
-            img(src="img/svg/traveller-illustration-mobile.svg" alt="Попутчик" width="192" height="255")
+            source(media="(min-width: 1024px)", srcset="img/svg/traveller-illustration-desktop.svg", type="image/svg+xml", width="431", height="640")
+            source(media="(min-width: 768px)", srcset="img/svg/traveller-illustration-tablet.svg", type="image/svg+xml", width="437", height="530")
+            img(src="img/svg/traveller-illustration-mobile.svg", alt="Попутчик", width="192", height="255")
         ul.promo__list
           li.promo__item.promo__item--first
             p
@@ -39,5 +39,3 @@ mixin promo
               | Путешествуйте
               br
               | вместе!
-
-
