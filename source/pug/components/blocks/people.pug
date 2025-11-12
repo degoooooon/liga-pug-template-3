@@ -1,0 +1,50 @@
+mixin people
+  section.people
+    .container
+      .people__wrapper
+        .people__inner
+          h2.people__title Попутчики
+          p.people__desctrep
+            | Все&nbsp;мы индивидуальны и&nbsp;у&nbsp;каждого свой взгляд&nbsp;на идеальный отдых.
+            br
+            |  Одному нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.
+          p.people__text Теперь можно легко найти единомышленников!
+          a.people__link.button(href="catalog.html")
+            +icon("polygon", 10, 12).people__polygon
+            | Показать всех
+        ul.people__list
+          li.people__item
+            .people__img
+              picture
+                source(media="(min-width: 768px)" srcset="img/people/layer-desktop.png, img/people/layer-desktop@2x.png 2x" type="image/png" width="285" height="286")
+                img(src="img/people/layer-mobile.png", srcset="img/people/layer-mobile@2x.png 2x" alt="" width="270" height="270")
+              .people__lvl
+                img(src="img/people/mark.png", alt="" width="60" height="60")
+              .people__stran
+                img(src="img/people/flags.png", alt="" width="145" height="24")
+            .people__wrap
+              h3.people__subtitle Таня Фирсова
+              p.people__desc #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
+              .people__svg
+                +icon("icon-plane", 23, 22)
+                +icon("icon-bus", 18, 20)
+                +icon("icon-bicycle", 25, 25)
+                +icon("icon-run", 22, 24)
+          li.people__item
+            .people__img
+              picture
+                source(media="(min-width: 768px)" srcset="img/people/demin-desktop.png, img/people/demin-desktop@2x.png 2x" type="image/png" width="285" height="286")
+                img(src="img/people/demin-mobile.png", srcset="img/people/demin-mobile@2x.png 2x" alt="" width="270" height="270")
+              .people__lvl
+                img(src="img/people/mark-2.png", alt="" width="60" height="60")
+              .people__stran
+                img(src="img/people/flags-2.png", alt="" width="90" height="25")
+            .people__wrap
+              h3.people__subtitle.people__subtitle--green Петя Демин
+              p.people__desc #бургер #бар #футбол #концерт #крафт
+              .people__svg
+                +icon("icon-plane", 23, 22)
+                +icon("icon-bu", 19, 20)
+                +icon("icon-bicycle", 25, 25)
+                +icon("icon-ru", 23, 24)
+

@@ -1,0 +1,391 @@
+.filter {
+  padding: 0 60px 70px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include vp-1279 {
+    padding: 0 40px 20px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      width: 100%;
+      background-color: #E2E5F2;
+      position: absolute;
+      top: -176px;
+      bottom: 25px;
+      border-radius: 0 0 60px 60px;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      height: auto;
+    }
+  }
+
+  @include vp-767 {
+    padding: 0 25px 3px;
+
+    &::before {
+      border-radius: 0 0 20px 20px;
+      bottom: 0;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    padding: 0 20px;
+
+    @include vp-1279 {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      padding: 0 0 0 32px;
+      margin-bottom: 59px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__toggle {
+    margin: 0;
+    text-transform: uppercase;
+    color: #192144;
+    margin-right: 5px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+
+    svg {
+      margin-right: 22px;
+      margin-top: -8px;
+
+      @include vp-1279 {
+        display: none;
+      }
+
+      @include vp-767 {
+        display: block;
+        margin-right: 12px;
+        width: 16px;
+        height: 10px;
+        margin-top: -2px;
+      }
+    }
+
+    @include vp-1279 {
+      flex-direction: row;
+      margin: 0 72px 0 0;
+    }
+
+    @include vp-767 {
+      flex-direction: row-reverse;
+      margin: 2px 0px 0 0;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__close {
+    @include vp-1279 {
+      &::before {
+        position: absolute;
+        top: -4px;
+        width: 2px;
+        height: 25px;
+        right: -29px;
+        content: "";
+        background-color: #192144;
+        transform: rotate(45deg);
+
+        @include vp-767 {
+          height: 19px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        top: -4px;
+        width: 2px;
+        height: 25px;
+        right: -29px;
+        content: "";
+        background-color: #192144;
+        transform: rotate(-45deg);
+
+        @include vp-767 {
+          height: 19px;
+        }
+      }
+    }
+  }
+
+  &__open::after {
+    @include vp-1279 {
+      content: "";
+      width: 7px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: #192144;
+      box-shadow: -13px 0px 0 #192144, 13px 0px 0 0 #192144;
+      position: absolute;
+      right: -48px;
+      top: 5px;
+    }
+
+    @include vp-767 {
+      width: 3px;
+      height: 3px;
+      box-shadow: -7px 0px 0 #192144, 7px 0px 0 0 #192144;
+      right: -16px;
+      top: 9px;
+    }
+  }
+
+  &__toggle-text {
+    font-size: 20px;
+    line-height: 20px;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+      text-align: left;
+    }
+  }
+
+  &__list {
+    padding: 0 31px 0 37px;
+    margin: 0 0 70px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 651px 498px 449px 495px 1fr;
+
+    @include vp-1279 {
+      grid-template-rows: 86px 80px 82px 85px 77px;
+      grid-template-columns: 78px 76px 82px 71px 60px;
+      padding: 0 31px 0 34px;
+      position: relative;
+      margin: 0 0 46px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: repeat(5, 43px);
+      grid-template-rows: repeat(5, 40px);
+      padding: 0 25px;
+      margin: 0 0 17px;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__span {
+    color: #192144;
+    opacity: 0.3;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked + &__span {
+    opacity: 1;
+  }
+
+  &__letter-btn {
+    pointer-events: none;
+    font-size: 60px;
+    line-height: 60px;
+    border: 0;
+    background-color: transparent;
+    color: #192144;
+    padding: 0;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+    @include vp-1279 {
+      pointer-events: auto;
+      cursor: pointer;
+      opacity: 0.3;
+    }
+
+    @include vp-767 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+      width: 43px;
+      height: 40px;
+      margin: 0;
+      opacity: 1;
+      border: 1px solid #CBCED9;
+    }
+  }
+
+  .is-active {
+    @include vp-1279 {
+      opacity: 1;
+    }
+
+    @include vp-767 {
+      background-color: #192144;
+      color: #ffffff;
+    }
+  }
+
+  &__continents {
+    display: flex;
+    gap: 25px;
+    margin-top: 2px;
+
+    @include vp-1279 {
+      gap: 21px;
+      margin-top: 3px;
+      margin-right: auto;
+    }
+
+    @include vp-767 {
+      order: -1;
+      flex-direction: column;
+      margin: 0 25px 21px;
+      gap: 3px;
+    }
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__button {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    border: 0;
+    width: 100%;
+    text-transform: uppercase;
+    color: #192144;
+    background-color: #D6DAED;
+    border-radius: 20px;
+    padding: 39px 30px 37px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #C8CEE8;
+    }
+
+    svg {
+      margin-right: 13px;
+
+      @include vp-1279 {
+        margin-right: 18px;
+      }
+
+      @include vp-767 {
+        width: 14px;
+        height: 14px;
+        margin-right: 11px;
+      }
+    }
+
+    @include vp-1279 {
+      max-width: 615px;
+      margin: 0 auto;
+      padding: 39px 23px 37px 20px;
+      grid-column: 1 / 3;
+      margin-bottom: 28px;
+    }
+
+    @include vp-767 {
+      padding: 12px 15px 7px 25px;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+.filter__list-countries {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @include vp-1279 {
+    display: none;
+    width: 167px;
+  }
+
+  @include vp-767 {
+    width: 138px;
+    margin-bottom: 5px;
+  }
+}
+
+.filter__active-list {
+  @include vp-1279 {
+    margin-left: auto;
+    width: 211px;
+  }
+
+  @include vp-767 {
+    margin-left: 25px;
+  }
+}
+
+.filter__container {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+
+  @include vp-1279 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.filter__container.is-open {
+  max-height: fit-content; /* или auto, если используешь JS для height */
+  opacity: 1;
+}

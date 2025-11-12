@@ -1,0 +1,197 @@
+mixin travelers
+  h1.visually-hidden Каталог
+  section.travelers
+    .travelers__container
+      .container
+        h2.travelers__title Попутчики
+    form(action="#" method="get")
+      +filter(countries)
+      .container
+        .travelers__wrapper
+          .travelers__container-wrapper
+            ul.travelers__list
+              li.travelers__item
+                img.travelers__img(src="img/people/layer-desktop.png", srcset="img/people/layer-desktop@2x.png 2x" alt="" width="285" height="286")
+                .travelers__wrap
+                  .travelers__inner
+                    h3.travelers__subtitle Таня Фирсова
+                    span.travelers__desk #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
+                    .travelers__buttons
+                      button.travelers__button(type="button") Позвать!
+                      .travelers__button-wrap
+                        button.travelers__like(type="button")
+                          +icon("icon-heart", 20, 20)
+                        span.travelers__text 1500
+                  .travelers__inner
+                    ul.travelers__countries
+                      li.travelers__country
+                        img(src="img/svg/srianka.svg", alt="" width="35" height="34")
+                        | шри-ланка
+                      li.travelers__country
+                        img(src="img/svg/thailand.svg", alt="" width="35" height="34")
+                        | Таиланд
+                      li.travelers__country
+                        img(src="img/svg/seychelles.svg", alt="" width="35" height="34")
+                        | сейшелы
+                    .travelers__icon
+                      span.travelers__svg
+                        +icon("icon-plane", 22,22)
+                      span.travelers__svg
+                        +icon("icon-bus", 20,20)
+                      span.travelers__svg
+                        +icon("icon-bicycle", 25,25)
+                      span.travelers__svg
+                        +icon("icon-run", 22,24)
+                    .travelers__circle
+                      svg.travelers__circular-chart(viewbox='0 0 36 36')
+                        path.travelers__stroke(stroke-dasharray='98, 100' d='M18 2.0845\
+                        a 15.9155 15.9155 0 0 1 0 31.831\
+                        a 15.9155 15.9155 0 0 1 0 -31.831')
+                        span.travelers__percentage(x='10' y='20.35') 99
+                        span.travelers__label(x='11' y='29') level
+                  span.travelers__desckrip
+                    span.travelers__deskr хочет посетить:
+                  span.travelers__lavel
+                    span.travelers__lavel-text транспорт:
+                    span.travelers__lavel-text левел:
+              li.travelers__item
+                img.travelers__img(src="img/people/demin-desktop.png", srcset="img/people/demin-desktop@2x.png 2x" alt="" width="287" height="285")
+                .travelers__wrap
+                  .travelers__inner
+                    h3.travelers__subtitle Петя Демин
+                    span.travelers__desk
+                      | #бургер #бар #футбол
+                      br
+                      | #концерт #крафт
+                    .travelers__buttons
+                      button.travelers__button(type="button") Позвать!
+                      .travelers__button-wrap
+                        button.travelers__like(type="button")
+                          +icon("icon-heart", 20, 20)
+                        span.travelers__text 1500
+                  .travelers__inner
+                    ul.travelers__countries
+                      li.travelers__country
+                        img(src="img/svg/belgium.svg", alt="" width="35" height="34")
+                        | Бельгия
+                      li.travelers__country
+                        img(src="img/svg/czech.svg", alt="" width="35" height="34")
+                        | Чехия
+                    .travelers__icon
+                      span.travelers__svg
+                        +icon("icon-plane", 22,22)
+                      span.travelers__svg
+                        +icon("icon-bu", 20,20)
+                      span.travelers__svg
+                        +icon("icon-bicycle", 25,25)
+                      span.travelers__svg
+                        +icon("icon-ru", 22,24)
+                    .travelers__circle
+                      svg.travelers__circular-chart(viewbox='0 0 36 36')
+                        path.travelers__stroke(stroke-dasharray='80, 100' d='M18 2.0845\
+                        a 15.9155 15.9155 0 0 1 0 31.831\
+                        a 15.9155 15.9155 0 0 1 0 -31.831')
+                        span.travelers__percentage(x='11' y='20.35') 80
+                        span.travelers__label(x='11' y='29') level
+                  span.travelers__desckrip
+                    span.travelers__deskr хочет посетить:
+                  span.travelers__lavel
+                    span.travelers__lavel-text транспорт:
+                    span.travelers__lavel-text левел:
+              li.travelers__item
+                img.travelers__img(src="img/people/smolov-desktop.jpg", srcset="img/people/smolov-desktop-1.jpg" alt="" width="287" height="285")
+                .travelers__wrap
+                  .travelers__inner
+                    h3.travelers__subtitle Марк Смолов
+                    span.travelers__desk
+                      | #рэп #тату #хайпбист
+                      br
+                      | #кроссовки #суприм
+                    .travelers__buttons
+                      button.travelers__button(type="button") Позвать!
+                      .travelers__button-wrap
+                        button.travelers__like(type="button")
+                          +icon("icon-heart", 20, 20)
+                        span.travelers__text 170
+                  .travelers__inner
+                    ul.travelers__countries
+                      li.travelers__country
+                        img(src="img/svg/america.svg", alt="" width="35" height="34")
+                        | Сша
+                      li.travelers__country
+                        img(src="img/svg/australia.svg", alt="" width="35" height="34")
+                        | Австралия
+                      li.travelers__country
+                        img(src="img/svg/dominica.svg", alt="" width="35" height="34")
+                        | Доминика
+                    .travelers__icon
+                      span.travelers__svg
+                        +icon("icon-plane", 22,22)
+                      span.travelers__svg
+                        +icon("icon-bus", 20,20)
+                      span.travelers__svg
+                        +icon("icon-bic", 25,25)
+                      span.travelers__svg
+                        +icon("icon-run", 22,24)
+                    .travelers__circle
+                      svg.travelers__circular-chart(viewbox='0 0 36 36')
+                        path.travelers__stroke(stroke-dasharray='25, 100' d='M18 2.0845\
+                        a 15.9155 15.9155 0 0 1 0 31.831\
+                        a 15.9155 15.9155 0 0 1 0 -31.831')
+                        span.travelers__percentage(x='10' y='20.35') 25
+                        span.travelers__label(x='11' y='29') level
+                  span.travelers__desckrip
+                    span.travelers__deskr хочет посетить:
+                  span.travelers__lavel
+                    span.travelers__lavel-text транспорт:
+                    span.travelers__lavel-text левел:
+              li.travelers__item
+                img.travelers__img(src="img/people/rogova.jpg", srcset="img/people/rogova@2x.jpg 2x" alt="" width="287" height="285")
+                .travelers__wrap
+                  .travelers__inner
+                    h3.travelers__subtitle.travelers__subtitle--live Лариса Роговая
+                    span.travelers__desk
+                      | #образование
+                      br
+                      | #карьера
+                      br
+                      | #учеба #линкедин
+                    .travelers__buttons
+                      button.travelers__button(type="button") Позвать!
+                      .travelers__button-wrap
+                        button.travelers__like(type="button")
+                          +icon("icon-heart", 20, 20)
+                        span.travelers__text 23
+                  .travelers__inner
+                    ul.travelers__countries
+                      li.travelers__country
+                        img(src="img/svg/united-kingdom.svg", alt="" width="35" height="34")
+                        | Великобритания
+                      li.travelers__country
+                        img(src="img/svg/germany.svg", alt="" width="35" height="34")
+                        | Германия
+                    .travelers__icon
+                      span.travelers__svg
+                        +icon("icon-plane", 22,22)
+                      span.travelers__svg
+                        +icon("icon-bu", 20,20)
+                      span.travelers__svg
+                        +icon("icon-bicycle", 25,25)
+                      span.travelers__svg
+                        +icon("icon-run", 22,24)
+                    .travelers__circle
+                      svg.travelers__circular-chart(viewbox='0 0 36 36')
+                        path.travelers__stroke(stroke-dasharray='50, 100' d='M18 2.0845\
+                        a 15.9155 15.9155 0 0 1 0 31.831\
+                        a 15.9155 15.9155 0 0 1 0 -31.831')
+                      span.travelers__percentage(x='11' y='20.35') 50
+                      span.travelers__label(x='11' y='29') level
+                  span.travelers__desckrip
+                    span.travelers__deskr хочет посетить:
+                  span.travelers__lavel
+                    span.travelers__lavel-text транспорт:
+                    span.travelers__lavel-text левел:
+            button.travelers__button-still(type="button") Показать еще
+              +icon("icon-plus-more", 26, 26)
+            +pagination()
+          +puputchik-filter()

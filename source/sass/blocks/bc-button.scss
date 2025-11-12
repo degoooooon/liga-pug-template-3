@@ -1,0 +1,19 @@
+.bc-button {
+  min-width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121936;
+  border-radius: 100%;
+
+  @include vp-1279 {
+    min-width: 68px;
+    height: 68px;
+  }
+
+  @include vp-767 {
+    min-width: 45px;
+    height: 45px;
+  }
+}

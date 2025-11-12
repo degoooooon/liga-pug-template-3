@@ -1,0 +1,99 @@
+.contant-info {
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0 0px 0 33px;
+  display: flex;
+  gap: 105px;
+  flex-wrap: wrap;
+
+  @include vp-1279 {
+    flex-direction: column;
+    margin: 0;
+    padding: 0 0 0 49px;
+    gap: 4px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+
+  &__link {
+    display: flex;
+    font-size: 28px;
+    line-height: 28px;
+    color: #cce5fA;
+    align-items: center;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &:hover {
+      color: #4D99D6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__svg {
+    margin: -3px 31px 0px 0;
+
+    @include vp-1279 {
+      margin: -5px 22px 0 0;
+    }
+
+    @include vp-767 {
+      min-width: 45px;
+      height: 45px;
+      margin: -2px 16px 0 0;
+    }
+
+    &--tel svg {
+      @include vp-1279 {
+        width: 27px;
+        height: 26px;
+      }
+
+      @include vp-767 {
+        width: 18px;
+        height: 17px;
+      }
+    }
+
+    &--mail svg {
+      @include vp-1279 {
+        width: 29px;
+        height: 19px;
+      }
+
+      @include vp-767 {
+        width: 19px;
+        height: 13px;
+      }
+    }
+  }
+}
+
+.contant-info--current {
+  display: none;
+  @include vp-1279 {
+    display: block;
+    gap: 8px;
+    margin-bottom: 22px;
+    margin-left: -11px;
+
+    svg {
+      color: #A8D2F4;
+    }
+
+    a {
+      color: #192144;
+    }
+  }
+}
+
+

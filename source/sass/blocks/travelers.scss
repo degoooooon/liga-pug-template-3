@@ -1,0 +1,703 @@
+.travelers {
+  padding: 0 0 79px;
+
+  @include vp-1279 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 62px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 26px;
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: #ffffff;
+    margin: 0;
+    font-variant: all-small-caps;
+    padding: 0 66px;
+    position: relative;
+
+    &::after {
+      content: "";
+      border-radius: 4px;
+      width: 288px;
+      height: 8px;
+      display: block;
+      background-color: #4d99d6;
+      position: absolute;
+      bottom: -72px;
+      left: 66px;
+
+      @include vp-1279 {
+        bottom: -71px;
+        left: 34px;
+      }
+
+      @include vp-767 {
+        width: 172px;
+        height: 5px;
+        bottom: -13px;
+        left: 0px;
+        background-color: #FFFFFF;
+      }
+    }
+
+    @include vp-1279 {
+      font-variant: normal;
+      padding: 0 34px;
+    }
+
+    @include vp-767 {
+      font-size: 36px;
+      line-height: 36px;
+      padding: 0;
+    }
+  }
+
+  &__container {
+    padding: 223px 0 67px;
+    background: #192144;
+    border-radius: 0 0 56px 56px;
+    margin-bottom: 60px;
+
+    @include vp-1279 {
+      z-index: 2;
+    }
+
+    @include vp-767 {
+      padding: 96px 0 11px;
+      border-radius: 0 0 20px 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrapper {
+    padding: 81px 0 0;
+    display: flex;
+
+    @include vp-1279 {
+      flex-direction: column-reverse;
+      padding: 16px 0 0;
+    }
+
+    @include vp-767 {
+      padding: 20px 0 0;
+    }
+  }
+
+  &__container-wrapper {
+    margin-right: 83px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0 0 29px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+
+    @include vp-1279 {
+      margin: 0 0 8px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background-color: #ffffff;
+    max-width: 951px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    @include vp-1279 {
+      padding: 33px 25px 25px 35px;
+      height: 332px;
+      margin-bottom: 39px;
+      max-width: 100%;
+    }
+
+    @include vp-767 {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      grid-template-rows: 84px 40px 31px auto 30px auto 40px;
+      padding: 15px 22px 16px 18px;
+      height: 416px;
+      margin-bottom: 10px;
+
+      &:nth-child(even) {
+        height: 393px;
+      }
+
+      &:nth-child(odd) {
+        .travelers__button-wrap {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__img {
+    border-radius: 20px 0 0 20px;
+
+    @include vp-1279 {
+      border-radius: 20px;
+      width: 190px;
+      height: 190px;
+      margin: 3px 0 0 0;
+    }
+
+    @include vp-767 {
+      border-radius: 100%;
+      width: 70px;
+      height: 70px;
+      grid-column: 1 / 2;
+      margin: 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    line-height: 30px;
+    color: #192144;
+    margin: 0 0 20px;
+    display: flex;
+    gap: 18px;
+
+    @include vp-1279 {
+      flex-direction: row-reverse;
+      margin: 0 0 18px 21px;
+      gap: 22px;
+      justify-content: flex-end;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 0 0 0 17px;
+    }
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      display: block;
+      background-color: #f97676;
+      border-radius: 100%;
+      margin-top: 11px;
+    }
+
+    &--live::before {
+      background-color: #81e31e;
+    }
+  }
+
+  &__countries {
+    margin: 4px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    @include vp-1279 {
+      flex-direction: row;
+      position: absolute;
+      left: 36px;
+      bottom: 26px;
+    }
+
+    @include vp-767 {
+      position: relative;
+      flex-direction: column;
+      left: 7px;
+      bottom: -9px;
+      gap: 10px;
+      grid-column: 1 / 3;
+      grid-row: 4 / 5;
+    }
+  }
+
+  .travelers__desckrip {
+    display: none;
+
+    @include vp-1279 {
+      display: flex;
+      position: absolute;
+      bottom: 69px;
+      left: 0;
+      right: 0;
+
+      &::before {
+        content: "";
+        width: calc(44% - 219px);
+        border-bottom: 1px solid #EDEFF6;
+        height: 9px;
+      }
+
+      &::after {
+        content: "";
+        width: 10px;
+        border-bottom: 1px solid #EDEFF6;
+        height: 10px;
+        flex-grow: 1;
+      }
+    }
+
+    @include vp-767 {
+      grid-column: 1 / 3;
+      grid-row: 3;
+      position: relative;
+      top: 11px;
+      left: 8px;
+
+      &::before {
+        width: calc(20% - 219px);
+      }
+    }
+  }
+
+  &__deskr {
+    @include vp-1279 {
+      font-size: 15px;
+      line-height: 16px;
+      color: #444444;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+  }
+
+  &__country {
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    gap: 18px;
+
+    @include vp-1279 {
+      gap: 13px;
+      align-items: flex-end;
+    }
+
+    @include vp-767 {
+      font-size: 15px;
+      line-height: 16px;
+    }
+
+    img {
+      @include vp-1279 {
+        width: 40px;
+        height: 24px;
+      }
+
+      @include vp-767 {
+        width: 26px;
+        height: 18px;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    padding: 46px 38px 51px 35px;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: 664px;
+
+    @include vp-1279 {
+      padding: 0px 0px 0px 12px;
+      display: grid;
+      grid-template-columns: 70% 30%;
+      grid-template-rows: 50px 54px 90px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      display: contents;
+    }
+  }
+
+  &__desk {
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 24px;
+    margin-bottom: auto;
+    width: 214px;
+
+    @include vp-767 {
+      font-size: 15px;
+      line-height: 18px;
+      margin-left: 7px;
+    }
+  }
+
+  &__buttons {
+    margin-left: 16px;
+    display: flex;
+    gap: 4px;
+
+    @include vp-1279 {
+      margin-top: 24px;
+    }
+
+    @include vp-767 {
+      display: contents;
+    }
+  }
+
+  &__button {
+    background-color: #a8d2f4;
+    border: 0;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 18px 15px 15px 15px;
+    color: #161C35;
+
+    @include vp-1279 {
+      width: 170px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      order: 1;
+      height: 40px;
+      font-size: 17px;
+      line-height: 17px;
+      top: -6px;
+      position: relative;
+      left: 2px;
+      padding: 14px 15px 15px;
+      grid-column: 1 / 3;
+      grid-row: 7;
+    }
+
+    &:hover {
+      background-color: #4D99D6;
+    }
+
+    &:active {
+      color: rgba(22, 28, 53, 0.3);
+    }
+  }
+
+  &__like {
+    width: 50px;
+    height: 50px;
+    background-color: #e2e5f2;
+    border: 0;
+    border-radius: 100%;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 4px;
+    color: rgba(25, 33, 68, 1);
+
+    &:hover {
+      color: rgba(25, 33, 68, 0.5);
+    }
+
+    &:active {
+      color: rgba(25, 33, 68, 0.1);
+    }
+
+    @include vp-1279 {
+      width: 56px;
+      height: 50px;
+      margin-left: 1px;
+    }
+
+    @include vp-767 {
+      width: 30px;
+      height: 30px;
+      margin-right: 7px;
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  &__icon {
+    margin-top: auto;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    width: 134px;
+
+    @include vp-1279 {
+      position: absolute;
+      right: 40px;
+      top: 39px;
+      flex-direction: column;
+      width: 26px;
+      gap: 2px;
+      margin-bottom: 0;
+    }
+
+    @include vp-767 {
+      flex-direction: row;
+      width: auto;
+      position: relative;
+      right: -3px;
+      top: -24px;
+      gap: 1px;
+      grid-column: 1 / 3;
+      grid-row: 6;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    right: 41px;
+    bottom: 41px;
+
+    @include vp-1279 {
+      right: 20px;
+      bottom: 99px;
+    }
+
+    @include vp-767 {
+      right: 20px;
+      bottom: 75px;
+      width: 47px;
+      height: 47px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #161C35;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__button-still {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: 0;
+    padding: 0 58px 0 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 70px;
+    cursor: pointer;
+    color: #1D2E5B;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @include vp-1279 {
+      padding: 2px 2px 0 11px;
+      margin-bottom: 51px;
+    }
+
+    @include vp-767 {
+      font-size: 17px;
+      line-height: 30px;
+      gap: 15px;
+      padding: 4px 2px 0 14px;
+      margin-bottom: 18px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+      width: 237px;
+
+      @include vp-1279 {
+        width: auto;
+      }
+    }
+
+    @include vp-1279 {
+      margin-right: 0;
+      min-height: 193px;
+    }
+
+    @include vp-767 {
+      min-height: 164px;
+      display: contents;
+    }
+  }
+}
+
+.travelers__svg {
+  @include vp-767 {
+    width: 32px;
+    height: 32px;
+    background-color: #EDEFF6;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 15px;
+      height: 16px;
+    }
+  }
+}
+
+.travelers__circular-chart {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.travelers__stroke {
+  fill: none;
+  stroke: #4D99D6;
+  stroke-width: 2;
+  stroke-linecap: round;
+
+  @include vp-1279 {
+    stroke: #FF8D30;
+  }
+}
+
+.travelers__percentage {
+  color: #1D2E5B;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  position: absolute;
+  top: 26%;
+  left: 30%;
+
+  &::after {
+    content: "";
+    width: 34px;
+    display: block;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    top: 29%;
+    left: 23%;
+  }
+}
+
+.travelers__label {
+  color: #000000;
+  opacity: 0.4;
+  font-size: 14px;
+  line-height: 14px;
+  position: absolute;
+  top: 68%;
+  left: 30%;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.travelers__item:first-child .travelers__buttons {
+  opacity: 0;
+}
+
+.travelers__item:first-child .travelers__button {
+  opacity: 0;
+}
+
+.travelers__item:last-child .travelers__desk br:first-child {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.travelers__button-wrap {
+  @include vp-767 {
+    position: absolute;
+    top: 55px;
+    left: 66px;
+  }
+}
+
+.travelers__lavel {
+  display: none;
+
+  @include vp-767 {
+    display: flex;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: #444444;
+    grid-row: 5;
+    grid-column: 1 / 3;
+    position: relative;
+    justify-content: space-between;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #EDEFF6;
+      position: absolute;
+      top: 9px;
+      left: 20px;
+    }
+  }
+}
+
+.travelers__lavel-text {
+  padding: 0 0 0 8px;
+  z-index: 1;
+  background-color: #ffffff;
+}

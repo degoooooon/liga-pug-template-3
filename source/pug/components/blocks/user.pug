@@ -1,0 +1,20 @@
+mixin user
+  section.user
+    .container
+      h2.user__title Добавьте свой профиль
+      .user__wrapper
+        ul.user__list
+          li.user__item.user__item--dark Базовое размещение
+          li.user__item.user__item--soft Вывод на первых позициях
+          li.user__item.user__item--light Кастомный цвет карточки
+        .user__inner
+          p.user__text Бесплатно
+          span
+            | 99&nbsp;руб./мес
+            br
+            | 59 руб./мес
+          .user__img
+            img(src="img/user/rates.png", srcset="img/user/rates@2x.png 2x" alt="" width="200" height="202")
+        +btn({text: "Показать тарифы для бизнеса"})(data-open-modal="feedback").user__button
+          span.user__svg
+            +icon("icon-businessman", 29, 28)

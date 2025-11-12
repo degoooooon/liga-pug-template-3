@@ -1,0 +1,20 @@
+mixin appointment
+  section.appointment
+    .container
+      form.appointment__form(action="https://echo.htmlacademy.ru" method="post")
+        h2.appointment__title Заинтересовались?
+        p.appointment__desk
+          | Зарегистрируйтесь, это быстро и&nbsp;бесплатно!
+          br
+          | Уже зарегистрированы?
+          span
+          | Тогда скорее
+          a(href="#")
+            |  авторизуйтесь.
+        .appointment__label
+          input(type="email" placeholder="E-mail" name="email" autocomplete="email")
+          button.appointment__button.button(type="submit")
+            span.appointment__span Регистрация
+            +icon("polygon", 14, 16)
+        p.appointment__text Остались вопросы? Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!
+        +contant-info()

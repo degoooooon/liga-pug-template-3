@@ -1,0 +1,399 @@
+.countries {
+  padding: 101px 0 66px;
+  position: relative;
+  z-index: 5;
+
+  @include vp-1279 {
+    padding: 61px 0 0;
+  }
+
+  @include vp-767 {
+    padding: 54px 0 0;
+  }
+
+  &__slider {
+    height: 440px;
+    overflow-y: hidden;
+    position: relative;
+
+    @include vp-1279 {
+      overflow-y: clip;
+      margin-bottom: 92px;
+    }
+
+    @include vp-767 {
+      height: 613px;
+      margin-bottom: 26px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -63px;
+    right: 0;
+    width: 52%;
+    top: -30px;
+    background-color: #EDEFF6;
+    border-radius: 0 0 56px 56px;
+
+    @include vp-1279 {
+      width: 100%;
+      border-radius: 0 0 60px 60px;
+      bottom: -58px;
+    }
+
+    @include vp-767 {
+      border-radius: 0 0 30px 30px;
+      bottom: -43px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 52% 50%;
+
+    @include vp-1279 {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0 36px 0 33px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 33px;
+    font-size: 75px;
+    line-height: 45px;
+    font-variant: all-small-caps;
+    color: #192144;
+
+    @include vp-1279 {
+      font-size: 95px;
+      line-height: 45px;
+      margin: 0 0 55px;
+      order: 1;
+      z-index: 1;
+    }
+
+    @include vp-767 {
+      font-size: 44px;
+      line-height: 24px;
+      margin: 0px 0 26px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding-left: 115px;
+
+    @include vp-1279 {
+      display: contents;
+    }
+  }
+
+  &__desctrep {
+    margin: 0 0 155px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 33px;
+    color: #444444;
+    z-index: 1;
+
+    span::after{
+      @include vp-1280 {
+        content: "\a ";
+        white-space: pre;
+      }
+    }
+
+    @include vp-1279 {
+      br:first-child {
+        display: none;
+      }
+    }
+
+    @include vp-1279 {
+      margin: 0px 0 74px 2px;
+      font-size: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 22px;
+      margin: 0 0 41px 0px;
+    }
+
+    br {
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  .countries__link {
+    padding: 29px 29px 27px 36px;
+    max-width: 300px;
+    margin: 0 0 30px 6px;
+
+    @include vp-1279 {
+      order: -1;
+      max-width: 100%;
+      padding: 31px 29px 27px 33px;
+      margin: 0 0 41px 3px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 18px;
+      padding: 24px 23px 23px 23px;
+      margin: 0 0 10px;
+      border-radius: 10px;
+    }
+  }
+
+  &__user {
+    position: absolute;
+    right: 41px;
+    top: 34px;
+
+    @include vp-1279 {
+      right: 20px;
+      top: 37px;
+    }
+
+    @include vp-767 {
+      right: 23px;
+      top: 26px;
+    }
+  }
+
+  &__list {
+    margin: -6px 56px 0 13px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    @include vp-1279 {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    max-width: 609px;
+    min-height: 140px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:nth-child(2n) {
+      @include vp-1279 {
+        .countries__svg {
+          left: 62.5%;
+
+          @include vp-1279 {
+            bottom: 77px;
+            left: -28%;
+          }
+
+          @include vp-767 {
+            left: 25px;
+            bottom: -5%;
+            z-index: 1;
+          }
+        }
+      }
+
+      @include vp-767 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 2px;
+        max-width: 100%;
+      }
+    }
+
+    @include vp-1279 {
+      max-width: 100%;
+    }
+
+    @include vp-767 {
+      background-color: transparent;
+      flex-direction: column-reverse;
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    margin-left: auto;
+    position: relative;
+
+    @include vp-1279 {
+      width: 186px;
+    }
+
+    @include vp-767 {
+      margin-left: 0;
+      width: auto;
+    }
+
+    img {
+      height: 100%;
+
+      @include vp-767 {
+        width: 100%;
+      }
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    bottom: 73px;
+    left: -21%;
+    height: 47px;
+
+    @include vp-1279 {
+      bottom: 77px;
+      left: -19%;
+    }
+
+    @include vp-767 {
+      width: 35px;
+      height: 24px;
+      left: 25px;
+      bottom: -5%;
+      z-index: 1;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 4px;
+    font-size: 24px;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @include vp-767 {
+      font-size: 21px;
+      line-height: 21px;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 24px;
+    opacity: 0.3;
+    color: #444444;
+
+    @include vp-1279 {
+      margin-bottom: 17px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    padding: 24px 30px 20px 32px;
+
+    @include vp-1279 {
+      padding: 30px 30px 14px;
+    }
+
+    @include vp-767 {
+      padding: 28px 17px 6px 24px;
+      background-color: #ffffff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 10px;
+      margin-top: -7px;
+    }
+  }
+
+  &__count {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #444444;
+
+    span {
+      opacity: 0.3;
+    }
+
+    @include vp-1279 {
+      margin: 0 0 0 -4px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 20px;
+      grid-column: 2 / 3;
+      grid-row: 1;
+      margin-left: auto;
+      width: 70px;
+
+      svg {
+        width: 16px;
+        height: 15px;
+      }
+    }
+  }
+
+  &__fon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: rotate(-180deg);
+    z-index: 1;
+
+    img {
+      width: 100%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    img {
+      width: 100%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}

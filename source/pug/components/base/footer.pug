@@ -1,0 +1,9 @@
+mixin footer()
+  footer.footer
+    .footer__container
+      .footer__wrapper
+        a.footer__logo(href="#")
+          picture
+            source(media="(min-width: 768px)" srcset="img/svg/logo-footer.svg" type="image/svg+xml")
+            img(src="img/svg/logo-mobile-footer.svg" alt="Логотип" width="96" height="15")
+        +social-list()

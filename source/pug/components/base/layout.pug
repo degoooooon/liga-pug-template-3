@@ -1,0 +1,54 @@
+doctype html
+
+include ../components
+
+block variables
+
+html(lang="ru")
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="ProjectName — описание")
+    //- генерируйте favicon тут - https://realfavicongenerator.net/
+    //- в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"
+    //- используйте только для шрифта находящегося на первом экране
+    link(rel='icon' type='image/png' sizes='16x16' href='img/favicon/favicon-16x16.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='img/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='96x96' href='img/favicon/favicon-152x152.png')
+    link(rel="preload", href="fonts/Roboto-Bold.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/Roboto-ExtraLight.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/Roboto-Light.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/Roboto-Medium.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/Roboto-Regular.woff2", as="font", crossorigin="anonymous")
+    //- При необходимости вы можете добавить разметку Open graf. - const Open graf = true
+    if (openGraf)
+      //- Обязательно измените содержание контента на тот что необходим!
+      //- Введите заголовок
+      meta(property="og:title", content="Погнали")
+      //- Введите заголовок путь к картинке
+      meta(property="og:image", content="https://24fortest.ru/img/content/sharing.png")
+      //- Введите необходимый тип
+      meta(property="og:type", content="article")
+      //- Введите адрес сайта
+      meta(property="og:url", content="https://24fortest.ru/")
+      //- Введите описание
+      meta(property="og:description", content="Простые и понятные решения в помощь разработчикам от команды Лига А")
+
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body
+    .wrapper(class=wrapperMods)
+      if (hasHeader)
+        +header(headerMods, currentUrl,contantinfo, sociallist,)
+
+      block main
+
+      if (hasFooter)
+        +footer()
+
+    block modals
+
+    script(src="js/vendor.min.js")
+    script(src="js/main.min.js")

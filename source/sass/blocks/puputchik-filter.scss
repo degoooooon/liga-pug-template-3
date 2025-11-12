@@ -1,0 +1,376 @@
+.puputchik-filter {
+  max-width: 285px;
+  height: 100%;
+
+  @include vp-1279 {
+    max-width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 46px 45px 48px 49px;
+    background-color: #cce5fa;
+    border-radius: 20px;
+
+    @include vp-1279 {
+      padding: 37px 19px 37px 34px;
+      margin-bottom: 42px;
+    }
+
+    @include vp-767 {
+      padding: 26px 15px 22px 25px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 0 34px 0;
+    color: #1d2e5b;
+
+    @include vp-1279 {
+      margin: 0 0 36px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      margin: 0 0 23px;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    &--open.is-open {
+      overflow: visible;
+    }
+
+    @include vp-1279 {
+      display: contents;
+    }
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 20px 0 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+
+    &--row {
+      flex-direction: row;
+      margin-top: 17px;
+    }
+
+    @include vp-1279 {
+      display: grid;
+      grid-template-columns: 162px 156px 168px;
+      gap: 11px;
+      margin: 0;
+      margin-left: auto;
+
+      &--row {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: -16px auto 0 6px;
+        gap: 1px;
+      }
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      margin: 11px 0 0;
+      gap: 0;
+
+      &--row {
+        flex-direction: row;
+      }
+    }
+  }
+
+  li {
+    margin-bottom: 16px;
+
+    @include vp-767 {
+      margin-bottom: 11px;
+    }
+  }
+
+  label {
+    display: flex;
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    gap: 13px;
+    align-items: end;
+    position: relative;
+    cursor: pointer;
+
+    @include vp-767 {
+      font-size: 15px;
+      line-height: 20px;
+      gap: 8px;
+    }
+
+    &:hover .puputchik-filter__tooltip {
+      display: block;
+    }
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    max-width: 200px;
+    background-color: #101D41;
+    color: #FFFFFF;
+    padding: 18px 14px;
+    z-index: 2;
+    transform: translate(-50%, 10px);
+    width: auto;
+    display: none;
+
+    &::before {
+      content: "";
+      background-color: #1d2e5b;
+      clip-path: polygon(100% 100%, 100% 0, 0 50%);
+      width: 12px;
+      height: 17px;
+      display: block;
+      position: absolute;
+      top: -11px;
+      left: 45%;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__checkbox {
+    background-color: #ffffff;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    svg {
+      display: none;
+    }
+
+    @include vp-767 {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  input:checked + span {
+    svg {
+      display: block;
+      color: #1D2E5B;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__span {
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      box-shadow: 0 2px 6px 0 rgba(22, 28, 53, 0.17);
+
+      svg {
+        opacity: 0.7;
+      }
+    }
+
+    svg {
+      opacity: 15%;
+    }
+
+    @include vp-767 {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  fieldset {
+    padding: 0;
+    margin: 0px 0 15px;
+    border: 0;
+    position: relative;
+
+    @include vp-1279 {
+      display: flex;
+      margin: 0 0 10px;
+
+      &:nth-child(3n) {
+        margin: 0 0 19px;
+      }
+
+      &:nth-child(4n) {
+        margin: 0 0 13px;
+      }
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      border-bottom: 1px solid #f3c72b;
+      margin: 0px 0 12px;
+      padding: 0 0 8px;
+
+      &:nth-child(3n) {
+        margin: 0 0 13px;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  &__inner {
+    @include vp-1279 {
+      padding: 38px 0 23px;
+      border-top: 1px solid #f3c72b;
+      border-bottom: 1px solid #f3c72b;
+      margin-bottom: 36px;
+    }
+
+    @include vp-767 {
+      border-bottom: 0;
+      padding: 13px 10px 0 2px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__toggle {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #1d2e5b;
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    span {
+      display: none;
+
+      @include vp-1279 {
+        display: block;
+      }
+    }
+
+    @include vp-1279 {
+      display: flex;
+      width: auto;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &::after {
+      content: "";
+      width: 7px;
+      height: 9px;
+      right: 0;
+      top: 6px;
+      position: absolute;
+      border: 4px solid transparent;
+      border-top: 5px solid #1d2e5b;
+      transition: transform 0.3s ease;
+
+      @include vp-1279 {
+        display: none;
+      }
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+
+    &.is-open::after {
+      transform: rotate(180deg);
+      top: 0;
+    }
+  }
+
+  &__button {
+    max-width: 192px;
+    height: 49px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #161c35;
+    padding: 18px 41px 17px 45px;
+    border: 0;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 25px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 3px;
+
+    @include vp-1279 {
+      max-width: 97%;
+      margin-top: 0;
+    }
+
+    @include vp-767 {
+      font-size: 17px;
+      line-height: 17px;
+      padding: 15px 25px 14px;
+      height: 41px;
+      max-width: 100%;
+      margin: 0 0px 0 -5px;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.14);
+    }
+
+    &:active {
+      background-color: #4D99D6;
+      color: rgba(22, 28, 53, 0.3);
+    }
+  }
+}

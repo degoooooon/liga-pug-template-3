@@ -1,0 +1,247 @@
+.promo {
+  padding-bottom: 115px;
+  padding-top: 102px;
+  position: relative;
+  z-index: 7;
+
+  @include vp-1023 {
+    padding-bottom: 0;
+    padding-top: 155px;
+  }
+
+  @include vp-767 {
+    padding-top: 102px;
+    padding-bottom: 50px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    margin: 87px 0 121px 12px;
+    font-size: 70px;
+    line-height: 70px;
+    color: $color-default-white;
+    font-variant: all-small-caps;
+    max-width: 550px;
+
+    @include vp-1023 {
+      font-size: 60px;
+      margin: 3px 0 459px 14px;
+    }
+
+    @include vp-767 {
+      font-size: 36px;
+      line-height: 40px;
+      margin: 0 0 289px;
+    }
+  }
+
+  &__list {
+    counter-reset: section;
+    margin: 0 0 0 22px;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: minmax(195px,auto) minmax(215px,auto) minmax(262px,auto) minmax(150px,auto);
+    z-index: 7;
+
+    @include vp-1023 {
+      grid-template-columns: minmax(344px,auto) minmax(319px,auto);
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      z-index: 2;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 30px 169px 29px 30px;
+    border-radius: 20px 0 0 20px;
+    position: relative;
+    margin-left: -22px;
+    box-shadow: -4px 0 10px 0 rgba(0, 0, 0, 0.25);
+
+    @include vp-1023 {
+      padding-bottom: 62px;
+      padding-left: 33px;
+    }
+
+    @include vp-767 {
+      margin-left: 0;
+      padding: 22px 47px 27px 24px;
+      margin-bottom: -5px;
+    }
+
+    &--first {
+      background-color: #4d99d6;
+      padding-left: 34px;
+
+      @include vp-1023 {
+        border-radius: 20px 0 0 0;
+      }
+
+      @include vp-767 {
+        border-radius: 10px 10px 0 0;
+        padding-left: 24px;
+      }
+    }
+
+    &--second {
+      background-color: #7EBAEB;
+      padding-right: 139px;
+
+      @include vp-1023 {
+        border-radius: 20px 20px 0 0;
+      }
+
+      @include vp-767 {
+        border-radius: 10px 10px 0 0;
+        padding: 23px 47px 22px 24px;
+      }
+    }
+
+    &--third {
+      background-color: #A8D2F4;
+      padding-right: 159px;
+
+      @include vp-1023 {
+        border-radius: 0 0 0 20px;
+        padding-right: 130px;
+      }
+
+      @include vp-767 {
+        border-radius: 10px 10px 0 0;
+        padding-right: 30px;
+      }
+    }
+
+    &--fourth {
+      background-color: #CCE5FA;
+      border-radius: 20px;
+
+      @include vp-1023 {
+        border-radius: 0 0 20px 20px;
+      }
+
+      @include vp-767 {
+        border-radius: 10px;
+        padding: 22px 47px 22px 24px;
+      }
+    }
+
+    &::after {
+      content: counter(section);
+      counter-increment: section;
+      font-size: 24px;
+      line-height: 24px;
+      position: absolute;
+      top: 30px;
+      right: 54px;
+      color: $color-default-white;
+
+      @include vp-1023 {
+        font-size: 30px;
+        line-height: 30px;
+        top: auto;
+        right: 86%;
+        bottom: 21px;
+      }
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 18px;
+        top: 22px;
+        right: 7%;
+      }
+    }
+
+     &--fourth::after {
+      right: 33px;
+
+      @include vp-1023 {
+        right: 86%;
+      }
+
+      @include vp-767 {
+        top: 22px;
+        right: 7%;
+      }
+     }
+
+    p {
+      margin: 0;
+      font-size: 22px;
+      line-height: 24px;
+      color: $basic-blue;
+
+      @include vp-1023 {
+        font-size: 24px;
+      }
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__fon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    @include vp-1023 {
+      bottom: 201px;
+    }
+
+    @include vp-767 {
+      bottom: 244px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: bottom;
+
+      @include vp-1023 {
+        object-position: 33.6%;
+        border-radius: 0;
+      }
+
+      @include vp-767 {
+        object-position: top;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 51%;
+
+    @include vp-1023 {
+      left: 37%;
+      top: 15%;
+    }
+
+    @include vp-767 {
+      left: 26.5%;
+      top: 158px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

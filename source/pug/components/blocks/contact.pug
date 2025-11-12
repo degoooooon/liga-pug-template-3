@@ -1,0 +1,12 @@
+mixin contact
+  section.contact
+    h2.visually-hidden Маршрут
+    .container
+      .contact__wrapper
+        a.contact__link(href="#")
+          .contact__svg.bc-button
+            +icon("icon-location", 42, 42)
+          | ул. Большая Конюшенная, 19/8
+        button.contact__button
+          span Проложить маршрут
+          +icon("polygon", 14, 16)

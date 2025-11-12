@@ -1,0 +1,24 @@
+.map {
+  padding: 0 0 40px;
+
+  @include vp-1279 {
+    padding: 0;
+  }
+
+  iframe {
+    display: block;
+    border: none;
+    width: 100%;
+    margin: -152px 0 -76px;
+
+    @include vp-1279 {
+      margin: -160px 0 -76px;
+      height: 700px;
+    }
+
+    @include vp-767 {
+      height: 500px;
+      margin: -120px 0 -30px;
+    }
+  }
+}

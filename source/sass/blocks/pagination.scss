@@ -1,0 +1,113 @@
+.pagination {
+  padding: 26px 39px 24px 29px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  max-width: 949px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+  @include vp-1279 {
+    padding: 26px 31px 24px 29px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    height: 51px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__link {
+    min-width: 50px;
+    min-height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #1D2E5B;
+
+    &:hover {
+      color: rgba(29, 46, 91, 0.6);
+    }
+
+    &:active {
+      background-color: #4D99D6;
+    }
+
+    &--current {
+      background-color: #4d99d6;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-left: auto;
+    gap: 34px;
+
+    @include vp-767 {
+      margin: 0 auto;
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 51px;
+        display: block;
+        background-color: #EDEFF6;
+        top: 0;
+        left: 50%;
+        position: absolute;
+      }
+    }
+  }
+
+  &__button {
+    width: 13px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+
+    &::before {
+      content: "";
+      background-color: #1d2e5b;
+      clip-path: polygon(100% 100%, 100% 0%, 0% 50%);
+      width: 12px;
+      height: 17px;
+      display: block;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--arrow::before {
+      clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+    }
+
+    @include vp-767 {
+      padding: 11px 56px 25px 45px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = "wrapper--catalog"
+  - const hasHeader = true
+  - const headerMods = "header--padding"
+  - const promoHas = false
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "catalog.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const headerBottom = "header__wrap--bottom"
+  - const sociallist = "social-list__list--current"
+  - const contantinfo = "contant-info--current"
+  - const main = "main"
+
+block main
+  main(class=main)
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +travelers()
+
+block modals

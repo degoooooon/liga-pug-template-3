@@ -1,0 +1,60 @@
+mixin countries
+  section.countries
+    .container
+      .countries__wrapper
+        .countries__slider
+          .countries__fon
+            img(src="img/countries/fade-1.png", alt="" width="610" height="81")
+          .countries__bottom
+            img(src="img/countries/fade-1.png", alt="" width="619" height="81")
+          ul.countries__list.swiper-wrapper
+            li.countries__item.swiper-slide
+              .countries__desc
+                h3.countries__subtitle Таиланд
+                span.countries__name Джунгли зовут!
+                span.countries__count
+                  +icon("icon-user", 28, 24)
+                  span 18321
+              .countries__img
+                picture
+                  source(media="(min-width: 768px)" srcset="img/countries/thailand-desktop.jpg, img/countries/thailand-desktop@2x.jpg 2x" width="202" height="140" type="image/jpg")
+                  img(src="img/countries/thailand-mobile.jpg", srcset="img/countries/thailand-mobile@2x.jpg 2x" alt="Тайланд" width="270" height="110")
+                .countries__svg
+                  img(src="img/svg/thailand.svg" alt="Флаг" width="76" height="47")
+            li.countries__item.swiper-slide
+              .countries__desc
+                h3.countries__subtitle Франция
+                span.countries__name Трэ бьен, манифик!
+                span.countries__count
+                  +icon("icon-user", 28, 24)
+                  span 12518
+              .countries__img
+                picture
+                  source(media="(min-width: 768px)" srcset="img/countries/france-desktop.jpg, img/countries/france-desktop@2x.jpg 2x" width="207" height="140" type="image/jpg")
+                  img(src="img/countries/france-mobile.jpg", srcset="img/countries/france-mobile@2x.jpg 2x" alt="Франция" width="270" height="110")
+                .countries__svg
+                  img(src="img/svg/france.svg" alt="Флаг" width="70" height="47")
+            li.countries__item.swiper-slide
+              .countries__desc
+                h3.countries__subtitle Чехия
+                span.countries__name Закоулки старой Европы
+                span.countries__count
+                  +icon("icon-user", 28, 24)
+                  span 5326
+              .countries__img
+                picture
+                  source(media="(min-width: 768px)" srcset="img/countries/czech-desktop.jpg, img/countries/czech-desktop@2x.jpg 2x" width="203" height="140" type="image/jpg")
+                  img(src="img/countries/czech-mobile.jpg", srcset="img/countries/czech-mobile@2x.jpg 2x" alt="Чехия" width="270" height="110")
+                .countries__svg
+                  img(src="img/svg/czech.svg" alt="Флаг" width="76" height="47")
+        .countries__inner
+          h2.countries__title Направления
+          p.countries__desctrep
+            | Мы не продаем туры и ничего не
+            br
+            |  рекламируем.
+            br
+            | Люди сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.
+          a.countries__link.button(href="catalog.html")
+            +icon("polygon", 10, 12).countries__user
+            | Показать все

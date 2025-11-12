@@ -1,0 +1,277 @@
+mixin filter
+  .filter
+    .filter__wrap
+      button.filter__toggle.filter__open(type="button" aria-expanded="false")
+        span.filter__toggle-text Фильтрация по странам:
+        +icon("icon-filter", 23, 15)
+      .filter__continents
+        label.filter__label
+          input.filter__input(type="checkbox" name="evropa" value="Европа" checked)
+          span.filter__span Европа
+        label.filter__label
+          input.filter__input(type="checkbox" name="azi" value="Азия")
+          span.filter__span Азия
+        label.filter__label
+          input.filter__input(type="checkbox" name="sua" value="Америка")
+          span.filter__span Америка
+        label.filter__label
+          input.filter__input(type="checkbox" name="ostrov" value="Острова")
+          span.filter__span Острова
+    .filter__container
+      ul.filter__list
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="А") А
+          ol.filter__list-countries(data-letter="А")
+            li.filter__item(data-region='Океания') Австралия
+            li.filter__item(data-region='Европа') Австрия
+            li.filter__item(data-region='Азия') Азербайджан
+            li.filter__item(data-region='Европа') Албания
+            li.filter__item(data-region='Африка') Алжир
+            li.filter__item(data-region='Африка') Ангола
+            li.filter__item(data-region='Европа') Андорра
+            li.filter__item(data-region='Острова') Антигуа и Барбуда
+            li.filter__item(data-region='Америка') Аргентина
+            li.filter__item(data-region='Азия') Армения
+            li.filter__item(data-region='Азия') Афганистан
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Б") Б
+          ol.filter__list-countries(data-letter="Б")
+            li.filter__item(data-region='Острова') Багамские Острова
+            li.filter__item(data-region='Азия') Бангладеш
+            li.filter__item(data-region='Острова') Барбадос
+            li.filter__item(data-region='Азия') Бахрейн
+            li.filter__item(data-region='Европа') Белоруссия
+            li.filter__item(data-region='Америка') Белиз
+            li.filter__item(data-region='Европа') Бельгия
+            li.filter__item(data-region='Африка') Бенин
+            li.filter__item(data-region='Европа') Болгария
+            li.filter__item(data-region='Америка') Боливия
+            li.filter__item(data-region='Европа')
+              | Босния и
+              br
+              | Герцеговина
+            li.filter__item(data-region='Африка') Ботсвана
+            li.filter__item(data-region='Америка') Бразилия
+            li.filter__item(data-region='Азия') Бруней
+            li.filter__item(data-region='Африка') Буркина-Фасо
+            li.filter__item(data-region='Африка') Бурунди
+            li.filter__item(data-region='Африка') Бутан
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="В") В
+          ol.filter__list-countries(data-letter="В")
+            li.filter__item(data-region='Океания') Вануату
+            li.filter__item(data-region='Европа') Великобритания
+            li.filter__item(data-region='Европа') Венгрия
+            li.filter__item(data-region='Америка') Венесуэла
+            li.filter__item(data-region='Азия')
+              | Восточный
+              br
+              | Тимор
+            li.filter__item(data-region='Азия') Вьетнам
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Г") Г
+          ol.filter__list-countries(data-letter="Г")
+            li.filter__item(data-region='Африка') Габон
+            li.filter__item(data-region='Америка') Гаити
+            li.filter__item(data-region='Америка') Гайана
+            li.filter__item(data-region='Африка') Гамбия
+            li.filter__item(data-region='Африка') Гана
+            li.filter__item(data-region='Европа') Гватемала
+            li.filter__item(data-region='Африка') Гвинея
+            li.filter__item(data-region='Африка') Гвинея-Бисау
+            li.filter__item(data-region='Европа') Германия
+            li.filter__item(data-region='Америка') Гондурас
+            li.filter__item(data-region='Острова') Гренада
+            li.filter__item(data-region='Европа') Греция
+            li.filter__item(data-region='Азия') Грузия
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Д") Д
+          ol.filter__list-countries(data-letter="Д")
+            li.filter__item(data-region='Европа') Дания
+            li.filter__item(data-region='Африка') Джибути
+            li.filter__item(data-region='Острова') Доминика
+            li.filter__item(data-region='Острова') Доминикана
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Е") Е
+          ol.filter__list-countries(data-letter="Е")
+            li.filter__item(data-region='Африка') Египет
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="З") З
+          ol.filter__list-countries(data-letter="З")
+            li.filter__item(data-region='Африка') Замбия
+            li.filter__item(data-region='Африка') Зимбабве
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="И") И
+          ol.filter__list-countries(data-letter="И")
+            li.filter__item(data-region='Азия') Израиль
+            li.filter__item(data-region='Азия') Индия
+            li.filter__item(data-region='Азия') Индонезия
+            li.filter__item(data-region='Азия') Иордания
+            li.filter__item(data-region='Азия') Ирак
+            li.filter__item(data-region='Азия') Иран
+            li.filter__item(data-region='Европа') Ирландия
+            li.filter__item(data-region='Европа') Исландия
+            li.filter__item(data-region='Европа') Испания
+            li.filter__item(data-region='Европа') Италия
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="К") К
+          ol.filter__list-countries(data-letter="К")
+            li.filter__item(data-region='Африка') Кабо-Верде
+            li.filter__item(data-region='Азия') Казахстан
+            li.filter__item(data-region='Азия') Камбоджа
+            li.filter__item(data-region='Африка') Камерун
+            li.filter__item(data-region='Америка') Канада
+            li.filter__item(data-region='Азия') Катар
+            li.filter__item(data-region='Африка') Кения
+            li.filter__item(data-region='Европа') Кипр
+            li.filter__item(data-region='Азия') Киргизия
+            li.filter__item(data-region='Азия') Кирибати
+            li.filter__item(data-region='Азия') Китай
+            li.filter__item(data-region='Америка') Колумбия
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Л") Л
+          ol.filter__list-countries(data-letter="Л")
+            li.filter__item(data-region='Азия') Лаос
+            li.filter__item(data-region='Европа') Латвия
+            li.filter__item(data-region='Африка') Лесото
+            li.filter__item(data-region='Африка') Либерия
+            li.filter__item(data-region='Азия') Ливан
+            li.filter__item(data-region='Африка') Ливия
+            li.filter__item(data-region='Европа') Литва
+            li.filter__item(data-region='Европа') Лихтенштейн
+            li.filter__item(data-region='Европа') Люксембург
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="М") М
+          ol.filter__list-countries(data-letter="М")
+            li.filter__item(data-region='Острова') Маврикий
+            li.filter__item(data-region='Африка') Мавритания
+            li.filter__item(data-region='Острова') Мадагаскар
+            li.filter__item(data-region='Африка') Малави
+            li.filter__item(data-region='Азия') Малайзия
+            li.filter__item(data-region='Африка') Мали
+            li.filter__item(data-region='Острова') Мальдивы
+            li.filter__item(data-region='Европа') Мальта
+            li.filter__item(data-region='Африка') Марокко
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Н") Н
+          ol.filter__list-countries(data-letter="Н")
+            li.filter__item(data-region='Африка') Намибия
+            li.filter__item(data-region='Океания') Науру
+            li.filter__item(data-region='Азия') Непал
+            li.filter__item(data-region='Африка') Нигер
+            li.filter__item(data-region='Африка') Нигерия
+            li.filter__item(data-region='Европа') Нидерланды
+            li.filter__item(data-region='Америка') Никарагуа
+            li.filter__item(data-region='Океания')
+              | Новая
+              br
+              | Зеландия
+            li.filter__item(data-region='Европа') Норвегия
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="О") О
+          ol.filter__list-countries(data-letter="О")
+            li.filter__item(data-region='Азия') ОАЭ
+            li.filter__item(data-region='Азия') Оман
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="П") П
+          ol.filter__list-countries(data-letter="П")
+            li.filter__item(data-region='Азия') Пакистан
+            li.filter__item(data-region='Океания') Палау
+            li.filter__item(data-region='Америка') Панама
+            li.filter__item(data-region='Океания') Папуа - Новая Гвинея
+            li.filter__item(data-region='Америка') Парагвай
+            li.filter__item(data-region='Америка') Перу
+            li.filter__item(data-region='Европа') Польша
+            li.filter__item(data-region='Европа') Португалия
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Р") Р
+          ol.filter__list-countries(data-letter="Р")
+            li.filter__item(data-region='Африка') Руанда
+            li.filter__item(data-region='Европа') Румыния
+            li.filter__item(data-region='Европа/Азия') Россия
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="С") С
+          ol.filter__list-countries(data-letter="С")
+            li.filter__item(data-region='Америка') Сальвадор
+            li.filter__item(data-region='Океания') Самоа
+            li.filter__item(data-region='Европа') Сан-Марино
+            li.filter__item(data-region='Азия') Саудовская Аравия
+            li.filter__item(data-region='Острова') Сейшелы
+            li.filter__item(data-region='Африка') Сенегал
+            li.filter__item(data-region='Европа') Сербия
+            li.filter__item(data-region='Азия') Сингапур
+            li.filter__item(data-region='Азия') Сирия
+            li.filter__item(data-region='Европа') Словакия
+            li.filter__item(data-region='Европа') Словения
+            li.filter__item(data-region='Америка') США
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Т") T
+          ol.filter__list-countries(data-letter="Т")
+            li.filter__item(data-region='Азия') Таджикистан
+            li.filter__item(data-region='Азия') Таиланд
+            li.filter__item(data-region='Африка') Танзания
+            li.filter__item(data-region='Африка') Того
+            li.filter__item(data-region='Океания') Тонга
+            li.filter__item(data-region='Острова') Тринидад и Тобаго
+            li.filter__item(data-region='Океания') Тувалу
+            li.filter__item(data-region='Африка') Тунис
+            li.filter__item(data-region='Азия') Туркмения
+            li.filter__item(data-region='Европа/Азия') Турция
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="У") У
+          ol.filter__list-countries(data-letter="У")
+            li.filter__item(data-region='Африка') Уганда
+            li.filter__item(data-region='Азия') Узбекистан
+            li.filter__item(data-region='Европа') Украина
+            li.filter__item(data-region='Америка') Уругвай
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Ф") Ф
+          ol.filter__list-countries(data-letter="Ф")
+            li.filter__item(data-region='Океания') Фиджи
+            li.filter__item(data-region='Азия') Филиппины
+            li.filter__item(data-region='Европа') Финляндия
+            li.filter__item(data-region='Европа') Франция
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Х") Х
+          ol.filter__list-countries(data-letter="Х")
+            li.filter__item(data-region='Европа') Хорватия
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Ч") Ч
+          ol.filter__list-countries(data-letter="Ч")
+            li.filter__item(data-region='Африка') Чад
+            li.filter__item(data-region='Европа') Черногория
+            li.filter__item(data-region='Европа') Чехия
+            li.filter__item(data-region='Америка') Чили
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Ш") Ш
+          ol.filter__list-countries(data-letter="Ш")
+            li.filter__item(data-region='Европа') Швейцария
+            li.filter__item(data-region='Европа') Швеция
+            li.filter__item(data-region='Азия') Шри-Ланка
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Э") Э
+          ol.filter__list-countries(data-letter="Э")
+            li.filter__item(data-region='Америка') Эквадор
+            li.filter__item(data-region='Африка') Эритрея
+            li.filter__item(data-region='Африка') Эсватини
+            li.filter__item(data-region='Европа') Эстония
+            li.filter__item(data-region='Африка') Эфиопия
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Ю") Ю
+          ol.filter__list-countries(data-letter="Ю")
+            li.filter__item(data-region='Африка') ЮАР
+            li.filter__item(data-region='Азия')
+              | Южный
+              br
+              | судан
+        li.filter__item
+          button.filter__letter-btn(type='button' data-letter="Я") Я
+          ol.filter__list-countries(data-letter="Я")
+            li.filter__item(data-region='Острова') Ямайка
+            li.filter__item(data-region='Азия') Япония
+      button.filter__button(type="button")
+        +icon("icon-close", 26, 24)
+        | Свернуть
+
+
+
